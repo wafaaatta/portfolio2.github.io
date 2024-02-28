@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire d'inscription</title>
+    <style>
+        /* Utilisation de la police 'Roboto' */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('fond.jpg');
+            background-size: cover; 
+            background-position: center; 
+        }
+
+        #container {
+            width: 50%;
+            margin: 50px auto;
+            background-color: #bdd1ef;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="email"], input[type="number"], select {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px; /* Bordures arrondies */
+            background-color: #f8f9fa; /* Couleur d'arrière-plan personnalisée */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre portée */
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background: linear-gradient(to right, #4e54c8, #8f94fb); /* Dégradé de couleur pour le bouton */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px; /* Bordures arrondies */
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(18, 216, 58, 0.1); /* Ombre portée */
+        }
+
+        input[type="submit"]:hover {
+            background: linear-gradient(to right, #434190, #6e74db); /* Effet de couleur au survol */
+        }
+
+        /* Animation au survol des champs de formulaire */
+        input[type="text"]:hover, input[type="email"]:hover, input[type="number"]:hover, select:hover {
+            transform: translateY(-3px); /* est une propriété CSS utilisée pour déplacer un élément vers le haut */
+            transition: transform 0.2s ease;
+        }
+
+        select {
+            background-color: white;
+            color: rgb(10, 9, 9);
+            padding: 0px;
+            border-radius: 8px; /* Bordures arrondies */
+            cursor: pointer;
+            width: 90%;
+            height: 40px;
+            border: 1px solid #ccc;
+        }
+
+        .elementOrder {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+        }
+
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        #datedelivrance, #datevalidite, #datenaissance {
+            background-color: white;
+            color: rgb(10, 9, 9);
+            padding: 0px;
+            border-radius: 8px; /* Bordures arrondies */
+            cursor: pointer;
+            width: 90%;
+            height: 40px;
+            border: 1px solid #ccc;
+        }
+
+        .element {
+            margin: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Formulaire d'inscription</h1>
+        <form id="#inscriptionForm" method="post">
+            <div class="elementOrder">
+                <label for="prenom">Prénom:</label>
+                <input type="text" id="prenom" name="prenom" required>
+            </div>
+            <div class="elementOrder">
+                <label for="nom">Nom:</label>
+                <input type="text" id="nom" name="nom" required>
+            </div>
+            <div class="elementOrder">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+            <div class="elementOrder">
+                <label for="sexe">Sexe:</label>
+                    <select id="sexe" name="sexe" required>
+                        <option value="homme">Homme</option>
+                        <option value="femme">Femme</option>
+                        <option value="autre">Autre</option>
+                    </select>
+            </div>
+            <div class="elementOrder">
+                <label for="email">Adresse Mail:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="elementOrder">
+                <label for="adresse">Adresse:</label>
+                <input type="text" id="adresse" name="adresse" required>
+            </div>
+            <div class="elementOrder">
+                <label for="codePostal">Code postal:</label>
+                <input type="text" id="codePostal" name="codePostal" required>
+            </div>
+            <div class="elementOrder">
+                <label for="ville">Ville:</label>
+                <input type="text" id="ville" name="ville" required>
+            </div>
+            <div class="elementOrder">
+                <label for="metier">Métier exercé:</label>
+                <select id="metierExerce" name="metierExerce">
+                    <option value="developpeur">Développeur</option>
+                    <option value="enseignant">Enseignant</option>
+                    <option value="infirmier">Infirmier</option>
+                    <option value="avocat">Avocat</option>
+                    <!-- Ajoutez d'autres si vous voulez-->
+                </select>
+            </div>
+            <div class="elementOrder">
+                <label for="nationalite">Nationalité:</label>
+                <select id="nationalite" name="nationalite">
+                    <option value="francaise">Française</option>
+                    <option value="americaine">Américaine</option>
+                    <option value="canadienne">Canadienne</option>
+                    <option value="britannique">Britannique</option>
+                    <!-- Ajoutez d'autres options selon vos besoins -->
+                </select>
+            </div>
+            <div class="elementOrder">
+                <label for="datenaissance">Date de naissance:</label>
+                <input type="date" id="datenaissance" name="datenaissance" required>
+            </div>
+            <div class="elementOrder">
+                <label for="paysnaissance">Pays de naissance:</label>
+                <input type="text" id="paysnaissance" name="paysnaissance" required>
+            </div>
+            <div class="elementOrder">
+                <label for="numeroSecu">Numéro de sécurité social:</label>
+                <input type="text" id="numeroSecu" name="numeroSecu" required>
+            </div>
+            <div class="elementOrder">
+                <label for="numeropasseport">Numéro du passeport:</label>
+                <input type="text" id="numeropasseport" name="numeropasseport" required>
+            </div>
+            <div class="elementOrder">
+                <label for="datedelivrance">Date de délivrance du passeport:</label>
+                <input type="date" id="datedelivrance" name="datedelivrance" required>
+            </div>
+            <div class="elementOrder">
+                <label for="datevalidite">Date de validité du passeport:</label>
+                <input type="date" id="datevalidite" name="datevalidite" required>
+            </div>
+            <div class="element">
+                <input type="submit" value="Envoyer">
+            </div>
+        </form>
+    </div>
+
+    <script>
+    function verifierCodePostal(champ) {
+        let codePostal = champ.value.trim();
+        
+        // Vérifier si le code postal contient exactement 5 chiffres
+        let expressionReguliere = /^\d{5}$/;
+        
+        if (expressionReguliere.test(codePostal)) {
+            // Code postal valide
+            console.log("Code postal valide : " + codePostal);
+            return true;
+        } else {
+            // Code postal invalide
+            console.log("Code postal invalide : " + codePostal);
+            return false;
+        }
+    }
+
+    function validerSelectionMetier() {
+        let metierExerce = document.querySelector("#metierExerce");
+        let selectedValue = metierExerce.value;
+
+        if (selectedValue === "") {
+            alert("Veuillez sélectionner un métier.");
+            // Vous pouvez ajouter d'autres actions à effectuer si aucun métier n'est sélectionné
+        } else {
+            alert("Métier sélectionné : " + selectedValue);
+            // Vous pouvez ajouter d'autres actions à effectuer si un métier est sélectionné
+        }
+    }
+
+    document.querySelector("#nationalite").addEventListener("change", function() {
+        let selectedValue = this.value;
+
+        if (selectedValue === "") {
+            alert("Veuillez sélectionner une nationalité.");
+            // Vous pouvez ajouter d'autres actions à effectuer si aucune nationalité n'est sélectionnée
+        } else {
+            alert("Nationalité sélectionnée : " + selectedValue);
+            // Vous pouvez ajouter d'autres actions à effectuer si une nationalité est sélectionnée
+        }
+    });
+
+    document.querySelector("form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Empêche l'envoi du formulaire par défaut
+
+        // Récupération des valeurs saisies dans le formulaire
+        let formulaire = document.querySelector("form");
+        let prenom = formulaire.querySelector("#prenom").value;
+        let nom = formulaire.querySelector("#nom").value;
+        let age = formulaire.querySelector("#age").value;
+        let email = formulaire.querySelector("#email").value;
+        let codePostal = formulaire.querySelector("#codePostal").value;
+        let numeroSecu = formulaire.querySelector("#numeroSecu").value;
+        let datedelivrance = formulaire.querySelector("#datedelivrance").value;
+        let datevalidite = formulaire.querySelector("#datevalidite").value;
+
+        // Vérification de la validité des données
+        let errors = [];
+
+        if (prenom === "") {
+            errors.push("Le prénom est requis.");
+        }
+
+        if (nom === "") {
+            errors.push("Le nom est requis.");
+        }
+
+        if (age === "") {
+            errors.push("L'âge est requis.");
+        } else if (isNaN(age) || age <= 0) {
+            errors.push("L'âge doit être un nombre positif.");
+        }
+
+        function isValidEmail(email) {
+            // Vérification de la validité de l'email (à implémenter selon vos besoins)
+            return true;
+        }
+
+        if (email === "") {
+            errors.push("L'adresse email est requise.");
+        } else if (!isValidEmail(email)) {
+            errors.push("L'adresse email n'est pas valide.");
+        }
+
+        if (!/^\d+$/.test(codePostal)) {
+            errors.push("Le code postal doit être composé uniquement de chiffres.");
+        }
+
+        if (numeroSecu === "") {
+            errors.push("Le numéro de sécurité sociale est requis.");
+        } else {
+            let numSecuRegex = /^(0|1)\d{12}$/; // Le numéro doit commencer par 0 ou 1 et contenir exactement 13 chiffres
+            if (!numSecuRegex.test(numeroSecu)) {
+                errors.push("Le numéro de sécurité sociale doit commencer par 0 ou 1 et contenir 13 chiffres.");
+            }
+        }
+
+        if (datedelivrance >= datevalidite) {
+            errors.push("La date de délivrance doit être antérieure à la date de validité du passeport.");
+            formulaire.querySelector("#datedelivrance").value = ''; // Réinitialiser la valeur
+        }
+
+        if (errors.length > 0) {
+            // Afficher les erreurs
+            alert("Veuillez corriger les erreurs suivantes :\n" + errors.join("\n"));
+            return false;
+        }
+
+        // Si tout est valide, soumettre le formulaire
+        formulaire.submit();
+    });
+</script>
+
+</body>
+</html>

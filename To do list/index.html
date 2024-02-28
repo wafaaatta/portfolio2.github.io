@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="taches.css"> 
+    <title>Document</title>
+    
+</head>
+<body>
+    <h1>To do liste</h1>
+    <div class="container">
+        <input id="inputField" type="text">
+        <button id="addToDo">+</button>
+        <div class="to-dos" id="toDoContainer">
+        
+        </div>
+    </div>
+    <script>
+        let addToDoButton = document.querySelector('#addToDo');
+        let toDoContainer = document.querySelector('#toDoContainer'); 
+        let inputField = document.querySelector('#inputField');
+
+        addToDoButton.addEventListener('click', function(){
+            if (inputField.value.trim() !== '') { ////The trim() function in JavaScript is used to remove whitespace (spaces, tabs, and newlines) from both the beginning and the end of a string
+                let paragraph = document.createElement('p'); 
+                paragraph.innerText = inputField.value;
+                toDoContainer.appendChild(paragraph);
+                paragraph.addEventListener('click', function(){
+                    paragraph.style.textDecoration = "line-through";
+                })
+                paragraph.addEventListener('dblclick', function(){
+                    toDoContainer.removeChild(paragraph);
+                })
+                inputField.value = ''; // Clear input field after adding todo
+            } else {
+                alert("Veuillez entrer une tâche avant d'ajouter à la liste.");
+            }
+        });
+    </script>
+</body>
+</html>
+
+

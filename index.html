@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Frenchcoder - Portfolio Moderne et Responsive + Dark mode HTML & CSS</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400&display=swap">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+    <h1>
+        <span class="material-symbols-outlined">magic_button</span>
+        Wafaa ATTA
+    </h1>
+    <ul>
+        <li>
+            <a href="mailto:wafaaatta04@gmail.com">
+                Email
+                <span class="material-symbols-outlined">call_made</span>
+            </a>
+        </li>
+        <li id="dark-light-mode" onclick="changeDarkMode()">Dark mode</li>
+    </ul>
+</nav>
+
+<header>
+    <div class="header-left">
+        <small>
+            <span class="material-symbols-outlined">home_pin</span>
+            Clermont-Ferrand
+        </small>
+        <h1>Hello,<br/> je suis Wafaa ATTA</h1>
+        <p>
+            Apprenante en développement web à Simplon Clermont-Ferrand, je recherche un stage de 21 Mai - 29 Juillet pour mettre en pratique mes compétences.
+        </p>
+
+        <div class="links">
+            <a href="https://github.com/wafaaatta">
+                Github
+                <span class="material-symbols-outlined">call_made</span>
+            </a>
+            <a href="https://www.linkedin.com/in/wafaa-atta-36b983209/">
+                LinkedIn
+                <span class="material-symbols-outlined">call_made</span>
+            </a>
+            <a href="CV Wafaa ATTA dev web.pdf">
+                CV
+                <span class="material-symbols-outlined">call_made</span>
+            </a>
+        </div>
+    </div>
+    <div class="header-right">
+        <img src="images/female.jpg" alt="profile-photo">
+    </div>
+</header>
+
+<section class="about">
+    <h4>À propos de moi</h4>
+    <p>
+        Bienvenue sur mon portfolio ! Je suis une Apprenante en développement web à Simplon Clermont-Ferrand. J'aime combiner créativité et technologie dans mes projets. Explorez ces pages pour voir comment je mets en pratique mes compétences en programmation.
+    </p>
+
+    <img class="signature" alt="signature" src="https://upload.wikimedia.org/wikipedia/commons/2/27/Narf_signature.png">
+</section>
+
+<section class="projects-section">
+    <h1>Mes Projets</h1>
+    <div id="projects" class="projects-container">
+        <div class="project">
+            <h4><a href="générateur de citation/index.html">Générateur de citation</a></h4>
+            <p class="description">
+                J'ai conçu un générateur de citation dans le cadre de mon portfolio, illustrant ainsi ma maîtrise des concepts HTML et ma capacité à créer des pages web interactives et engageantes.
+            </p>
+        </div>
+        <div class="project">
+            <h4><a href="To do list/index.html">To-do list</a></h4>
+            <p class="description">
+                Mon projet de To-do list, développé en utilisant JavaScript, démontre mon expertise dans la création d'applications web dynamiques et fonctionnelles, mettant en valeur mes compétences en programmation côté client.
+            </p>
+        </div>
+        <div class="project">
+            <h4><a href="https://www.figma.com/file/vXEBO2c3qHdKUdf6fOffU8/Untitled?type=design&node-id=0-1&mode=design&t=hoDSkoorGakepNG0-0">Projet Figma</a></h4>
+            <p class="description">
+                Le projet Figma illustre mon engagement à créer des designs élégants et fonctionnels, démontrant ma capacité à transformer des concepts en interfaces utilisateur intuitives et attrayantes dans le cadre de mon parcours en développement web.
+            </p>
+        </div>
+        <div class="project">
+            <h4><a href="Les formulaires.html">Formulaire d'inscription</a></h4>
+            <p class="description">
+                Mon projet de formulaire consiste à concevoir et à développer une interface interactive permettant aux utilisateurs de saisir et de soumettre des informations requises pour une fonctionnalité ou un service spécifique.
+            </p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <h3>
+        <span class="material-symbols-outlined">magic_button</span>
+        Wafaa ATTA
+    </h3>
+    <p>&copy; Wafaa ATTA 2024</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
